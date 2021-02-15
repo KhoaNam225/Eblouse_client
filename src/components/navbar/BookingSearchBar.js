@@ -48,11 +48,11 @@ const BookingSearchBar = ({
               setSpecQuery(e.target.value);
             }}
           >
-            <option value="" disabled selected>
+            <option value="" disabled>
               Choose a specialization
             </option>
             {specializations.map((spec) => (
-              <option>{spec.name}</option>
+              <option key={spec._id}>{spec.name}</option>
             ))}
           </select>
         </div>

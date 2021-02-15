@@ -48,7 +48,7 @@ const HomePage = () => {
       <section className="slogan">
         <h1 className="feel">Feeling mehh? Find a doctor.</h1>
       </section>
-      <section className="reviews-carousel">
+      {/* <section className="reviews-carousel">
         {isLoading ? (
           <LoadingSpinner animation="border" color="danger" />
         ) : (
@@ -58,7 +58,7 @@ const HomePage = () => {
             slidesNum={3}
           />
         )}
-      </section>
+      </section> */}
       {/* second paragraph */}
       <section id="between2">
         <div className="container2">
