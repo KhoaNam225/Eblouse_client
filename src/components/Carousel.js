@@ -1,9 +1,6 @@
 import React from "react";
-import Carousel, {
-  slidesToShowPlugin,
-  arrowsPlugin,
-} from "@brainhubeu/react-carousel";
-import "@brainhubeu/react-carousel/lib/style.css";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import "../style/MultiItemsCarousel.css";
 
 export const MultiItemsCarousel = ({ items, slidesNum, offset }) => {
@@ -20,25 +17,48 @@ export const MultiItemsCarousel = ({ items, slidesNum, offset }) => {
   return (
     <div className="carousel-wrapper">
       <Carousel
-        offset={offset}
-        draggable={false}
-        plugins={[
-          "infinite",
-          {
-            resolve: slidesToShowPlugin,
-            options: {
-              numberOfSlides: slidesNum,
+        additionalTransfrom={0}
+        arrows
+        autoPlaySpeed={3000}
+        centerMode={true}
+        className=""
+        containerClass="container"
+        dotListClass=""
+        draggable
+        focusOnSelect={false}
+        infinite
+        itemClass=""
+        keyBoardControl
+        minimumTouchDrag={80}
+        renderButtonGroupOutside={true}
+        renderDotsOutside={false}
+        responsive={{
+          desktop: {
+            breakpoint: {
+              max: 3000,
+              min: 1024,
             },
+            items: slidesNum,
           },
-          {
-            resolve: arrowsPlugin,
-            options: {
-              arrowLeft: <NavigationArrows direction={"left"} />,
-              arrowRight: <NavigationArrows direction={"right"} />,
-              addArrowClickHandler: true,
+          mobile: {
+            breakpoint: {
+              max: 464,
+              min: 0,
             },
+            items: slidesNum,
           },
-        ]}
+          tablet: {
+            breakpoint: {
+              max: 1024,
+              min: 464,
+            },
+            items: slidesNum,
+          },
+        }}
+        showDots={false}
+        sliderClass=""
+        slidesToSlide={1}
+        swipeable
       >
         {items}
       </Carousel>

@@ -106,7 +106,10 @@ const ClinicInfo = ({ clinic }) => {
       status,
     } = doctor;
     return (
-      <div className="doctor-info-card">
+      <div
+        className="doctor-info-card"
+        style={{ width: "400px", background: "white" }}
+      >
         <div className="avatar-wrapper">
           <img
             src={avatarUrl}

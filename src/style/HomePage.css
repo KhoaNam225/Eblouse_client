@@ -12,6 +12,7 @@
 }
 
 .home-page-review-card {
+  background: white;
   cursor: pointer;
   width: 400px;
   border: none;
